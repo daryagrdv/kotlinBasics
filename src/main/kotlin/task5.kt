@@ -1,11 +1,11 @@
 fun main() {
-    val seconds: UShort = 6480u
+    val seconds: Short = 6480
 
-    val minutes: UInt = seconds / 60u
-    val secondsRest: UInt = seconds % 60u
+    val minutes: Int = seconds / 60
+    val secondsRest: Int = seconds % 60
 
-    val hours: UInt = minutes / 60u
-    val minutesRest: UInt = minutes % 60u
+    val hours: Int = minutes / 60
+    val minutesRest: Int = minutes % 60
 
-    println( "$hours:$minutesRest:$secondsRest")
+    println(String.format("%02d:%02d:%02d", hours, minutesRest, secondsRest))
 }
