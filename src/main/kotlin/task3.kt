@@ -1,17 +1,22 @@
-fun main(){
-    val year: UInt = 1961u
-    var hour: UInt = 9u
-    var minute: UInt = 7u
+const val YEAR = 1961
+const val FLIGHT_HOUR = "09"
+const val FLIGHT_MINUTE = "07"
+const val ARRIVAL_HOUR = "10"
+const val ARRIVAL_MINUTE = "55"
 
-    println("Первый полет человека в космос приходится на $year год")
+fun main(){
+    var hour = FLIGHT_HOUR
+    var minute = FLIGHT_MINUTE
+
+    println("Первый полет человека в космос приходится на $YEAR год")
     println("Старт (ч.) $hour")
     println("Старт (мин.) $minute")
 
-    hour = 10u
-    minute = 55u
+    hour = ARRIVAL_HOUR
+    minute = ARRIVAL_MINUTE
 
     print("Посадка в ")
-    print("$hour")
+    print(hour)
     print(":")
-    print("$minute")
+    print(minute)
 }
