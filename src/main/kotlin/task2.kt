@@ -7,7 +7,7 @@ fun main(){
     println("Сообщение благодарности - $message")
 
     var employeeCount: UInt = 2000u
-    println("Количество сотрудников - $employeeCount")
+    //println("Количество сотрудников - $employeeCount")
 
     employeeCount -= 1u
     println("Один работник уволился - $employeeCount")
