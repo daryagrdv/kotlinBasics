@@ -18,12 +18,16 @@ fun main() {
 
     val departureHour: UShort = 9u
     val departureMinute: UShort = 39u
-    val travelTimeAsMinutes: UShort = 457u // 7ч 37мин
+    val travelTimeAsMinutes: UInt = 457u
 
     val arrivalTimeAsMinutes = departureHour * HOUR_AS_MINUTES + departureMinute + travelTimeAsMinutes
 
-    val arrivalHour = arrivalTimeAsMinutes / HOUR_AS_MINUTES
+    var arrivalHour = arrivalTimeAsMinutes / HOUR_AS_MINUTES
     val arrivalMinutes = arrivalTimeAsMinutes - arrivalHour * HOUR_AS_MINUTES
+
+    if (arrivalHour >= 24u) {
+        arrivalHour %= 24u
+    }
 
     println("Поезд прибудет в $arrivalHour ч. $arrivalMinutes мин.")
 
