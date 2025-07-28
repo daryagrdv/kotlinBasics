@@ -14,15 +14,16 @@ package lesson2
 
  */
 
-const val PERCENT = 0.2f
+const val PERCENT = 100
+const val BUFF = 20
 
 fun main(){
 
     val crystalOre = 7
     val ironOre = 11
 
-    val bonusCrystalOre: Int = (crystalOre * PERCENT).toInt()
-    val bonusIronOre: Int = (ironOre * PERCENT).toInt()
+    val bonusCrystalOre: Int = (crystalOre * BUFF / PERCENT)
+    val bonusIronOre: Int = (ironOre * BUFF / PERCENT)
 
     println("Бонус на кристаллическую руду = $bonusCrystalOre")
     println("Бонус на металлическую руду = $bonusIronOre")
