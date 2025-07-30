@@ -1,19 +1,19 @@
 package lesson2
 
-const val OLD_EMPLOYEES_COUNT: UInt = 50u
-const val OLD_EMPLOYEES_SALARY: UInt = 30000u
-
-const val TRAINEES_COUNT: UInt = 30u
-const val TRAINEES_SALARY: UInt = 20000u
-
 fun main(){
 
-    val oldEmployeesExpenses: UInt = OLD_EMPLOYEES_SALARY * OLD_EMPLOYEES_COUNT
-    val traineesExpenses: UInt = TRAINEES_SALARY * TRAINEES_COUNT
+    val oldEmployeesCount: Int = 50
+    val oldEmployeeSalary: Int = 30000
 
-    val commonExpenses: UInt = oldEmployeesExpenses + traineesExpenses
+    val traineesCount: Int = 30
+    val traineesSalary: Int = 20000
 
-    val avrgEmployees: UInt = (oldEmployeesExpenses + traineesExpenses) / (OLD_EMPLOYEES_COUNT + TRAINEES_COUNT)
+    val oldEmployeesExpenses: Int = oldEmployeeSalary * oldEmployeesCount
+    val traineesExpenses: Int = traineesSalary * traineesCount
+
+    val commonExpenses: Int = oldEmployeesExpenses + traineesExpenses
+
+    val avrgEmployees: Int = (oldEmployeesExpenses + traineesExpenses) / (oldEmployeesCount + traineesCount)
 
     println("Затраты на старых сотрудников $oldEmployeesExpenses")
     println("Общие затраты на всех $commonExpenses")
