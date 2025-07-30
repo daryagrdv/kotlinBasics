@@ -12,22 +12,21 @@ package lesson2
 
  */
 
-const val HOUR_AS_MINUTES = 60u
+const val HOUR_AS_MINUTES = 60
+const val DAY_AS_HOURS = 24
+
 
 fun main() {
 
-    val departureHour: UShort = 9u
-    val departureMinute: UShort = 39u
-    val travelTimeAsMinutes: UInt = 457u
+    val departureHour: Short = 9
+    val departureMinute: Short = 39
+    val travelTimeAsMinutes: Int = 457
 
     val arrivalTimeAsMinutes = departureHour * HOUR_AS_MINUTES + departureMinute + travelTimeAsMinutes
 
     var arrivalHour = arrivalTimeAsMinutes / HOUR_AS_MINUTES
-    val arrivalMinutes = arrivalTimeAsMinutes - arrivalHour * HOUR_AS_MINUTES
-
-    if (arrivalHour >= 24u) {
-        arrivalHour %= 24u
-    }
+    val arrivalMinutes = arrivalTimeAsMinutes % arrivalHour
+    arrivalHour %= DAY_AS_HOURS
 
     println("Поезд прибудет в $arrivalHour ч. $arrivalMinutes мин.")
 
