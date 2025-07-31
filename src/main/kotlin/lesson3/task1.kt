@@ -13,13 +13,12 @@ fun main(){
 
     val userName = "Darya"
     var greeting = "Good afternoon"
-    val separator = ", "
 
-    greeting = "$greeting$separator$userName"
+    greeting = "$greeting, $userName"
 
     println(greeting)
 
-    greeting = "Good evening$separator$userName"
+    greeting = "Good evening, $userName"
 
     println(greeting)
 
