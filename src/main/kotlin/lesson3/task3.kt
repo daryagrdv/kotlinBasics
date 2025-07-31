@@ -17,19 +17,23 @@ package lesson3
  – Вывод всей таблицы нужно сделать в одной функции println(), которая вызывается один раз.
 */
 
-fun main(){
+fun main() {
 
     val number = 3
     var factor = 1
 
-    println("$number x $factor = ${number * factor++} \n" +
-            "$number x $factor = ${number * factor++} \n" +
-            "$number x $factor = ${number * factor++} \n" +
-            "$number x $factor = ${number * factor++} \n" +
-            "$number x $factor = ${number * factor++} \n" +
-            "$number x $factor = ${number * factor++} \n" +
-            "$number x $factor = ${number * factor++} \n" +
-            "$number x $factor = ${number * factor++} \n" +
-            "$number x $factor = ${number * factor} \n")
+    println(
+        """
+        $number x $factor = ${number * factor++}
+        $number x $factor = ${number * factor++} 
+        $number x $factor = ${number * factor++} 
+        $number x $factor = ${number * factor++} 
+        $number x $factor = ${number * factor++}
+        $number x $factor = ${number * factor++}
+        $number x $factor = ${number * factor++}
+        $number x $factor = ${number * factor++}
+        $number x $factor = ${number * factor}
+    """.trimIndent()
+    )
 
 }
