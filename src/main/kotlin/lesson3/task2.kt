@@ -11,15 +11,15 @@ package lesson3
  */
 fun main(){
 
-    val lastName = "Андреева"
+    var lastName = "Андреева"
     val firstName = "Татьяна"
     val patronomic = "Сергеевна"
-    val age = 20u
+    var age = 20
 
-    val updatedLastName = "Сидорова"
-    val updatedAge = 22u
+    lastName = "Сидорова"
+    age = 22
 
     println("[$lastName $firstName $patronomic, $age]")
-    println("[$updatedLastName $firstName $patronomic, $updatedAge]")
+    println("[$lastName $firstName $patronomic, $age]")
 
 }
