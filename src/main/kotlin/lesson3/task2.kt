@@ -16,10 +16,11 @@ fun main(){
     val patronomic = "Сергеевна"
     var age = 20
 
+    println("[$lastName $firstName $patronomic, $age]")
+
     lastName = "Сидорова"
     age = 22
 
-    println("[$lastName $firstName $patronomic, $age]")
     println("[$lastName $firstName $patronomic, $age]")
 
 }
